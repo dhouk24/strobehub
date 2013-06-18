@@ -5,12 +5,12 @@ function TrackView() {
 
   this.initializeView = function(track){
     var elem = thisView.template(track);
-    $('ul#track_list').append(elem);
+    $('#loading_' + track.index).replaceWith(elem);
     $('.audio_clip').draggable({ axis: "x" });
   };
 
   this.render = function(track){
-    $('#track_'+track.index).replaceWith(thisView.template( track ));
+    $('#loading_'+track.index).replaceWith(thisView.template( track ));
     $('.audio_clip').draggable({ axis: "x" });
   };
 

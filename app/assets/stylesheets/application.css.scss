@@ -187,6 +187,10 @@ img.gravatar {
   height:160px;
 }
 
+.loading_track {
+  background-image: image-url("ajax-loader.gif");
+}
+
 #dropzone {
   width: 900px;
   height: 100px;
