@@ -1,12 +1,14 @@
-<div class="rain">
-  <div class="border start">
-    <%= form_for :sessions, url: login_path do |f| %>
-    <br>
-    <%= f.text_field :username, placeholder: "Username", autofocus: true %>
-    <br>
-    <%= f.password_field  :password, placeholder: "Password" %>
-    <br>
-    <%= f.submit "Log In" %>
-    <% end %>
-  </div>
+<div class="flash-form">
+    <div class="rain">
+      <div class="border start">
+        <%= form_for :sessions, url: login_path do |f| %>
+        <br>
+        <%= f.text_field :username, placeholder: "Username", autofocus: true %>
+        <br>
+        <%= f.password_field  :password, placeholder: "Password" %>
+        <br>
+        <%= f.submit "Log In" %>
+        <% end %>
+    </div>
+</div>
 </div>
