@@ -67,7 +67,7 @@ li {
   padding-top:8px;
 }
 
-.tag a{
+.tag a {
   border: 2px solid #39FF14;
   padding: 2px 4px;
   margin: 2px;
@@ -251,13 +251,31 @@ div.thin, li.thin {
   width:150px;
 }
 
-.track_row.bottom {
-  height:50px;
+.bottom {
+  display: inline-block;
+  height: 100px;
 }
 
-#dropzone {
-  width:600px;
+#dropzone, #dropzone_disabled, #dropzone_sign_in {
+  width: 600px;
+  height: 100px;
   text-align: center;
+}
+
+#dropzone h1, #dropzone_disabled h2, #dropzone_sign_in h1 {
+  font-size: 50px;
+  line-height: 100px;
+  padding: 0;
+  display: block;
+  color: #DDD;
+}
+
+#dropzone_disabled h2 {
+  font-size: 40px;
+}
+
+#dropzone form {
+  display: none;
 }
 
 #save_version {
@@ -305,7 +323,6 @@ form.favorite{
   padding: 5px;
 }
 
-/*Form CSS starts here*/
 
 .border, .rain {
   width: 500px;
@@ -393,7 +410,9 @@ form.favorite{
   -webkit-animation-name: none;
 }
 
-form {
+/* Signup/login Form CSS starts here*/
+
+div.flash-form form {
   background-color: transparent;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -402,14 +421,14 @@ form {
   width: 100%;
 }
 
-form label {
+div.flash-form form label {
   display: block;
   padding: 5px 10px 5px 15px;
   font-size: 11px;
   color: #777;
 }
 
-form input {
+div.flash-form form input {
   display: block;
   margin: 5px 10px 10px 15px;
   height: 50px;
@@ -425,36 +444,17 @@ form input {
   font-size: 24px;
 }
 
-form textarea {
-  display: block;
-  margin: 5px 10px 10px 15px;
-  width: 85%;
-  background: #111;
-  -moz-box-shadow: 0px 0px 4px #000 inset;
-  -webkit-box-shadow: 0px 0px 4px #000 inset;
-  box-shadow: 0px 0px 4px #000 inset;
-  outline: 1px solid #333;
-  border: 1px solid #000;
-  padding: 5px;
-  color: #444;
-  font-size: 24px;
-}
-
-input[type=checkbox] {
+div.flash-form input[type=checkbox] {
   float: left;
   display: inline-block;
 }
 
-form input:focus {
+div.flash-form form input:focus {
   outline: none;
   color: #FFF;
 }
 
-form textarea:focus {
-  outline: none;
-  color: #FFF;
-}
-  input[type="submit"] {
+div.flash-form input[type="submit"] {
   color: #999;
   padding: 5px 10px;
   float: right;
@@ -474,5 +474,90 @@ form textarea:focus {
   box-shadow: 0px 1px 1px #000,0px 1px 0px rgba(255,255,255,.3) inset;
   text-shadow: 0 1px 1px #000;
 }
-/*Form CSS ends here*/
 
+/* Signup/login Form CSS ends here*/
+
+/* New Repo Form starts here */
+div.new-repo form {
+  background-color: transparent;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+div.new-repo form label {
+  display: block;
+  padding: 5px 10px 5px 15px;
+  font-size: 11px;
+  color: #777;
+}
+
+div.new-repo form input {
+  display: block;
+  margin: 5px 10px 10px 15px;
+  height: 50px;
+  width: 85%;
+  background: #111;
+  -moz-box-shadow: 0px 0px 4px #000 inset;
+  -webkit-box-shadow: 0px 0px 4px #000 inset;
+  box-shadow: 0px 0px 4px #000 inset;
+  border-radius: 12px;
+  border: 1px solid #000;
+  padding: 5px;
+  color: #444;
+  font-size: 24px;
+}
+
+div.new-repo form textarea {
+  display: block;
+  margin: 5px 10px 10px 15px;
+  width: 85%;
+  background: #111;
+  -moz-box-shadow: 0px 0px 4px #000 inset;
+  -webkit-box-shadow: 0px 0px 4px #000 inset;
+  box-shadow: 0px 0px 4px #000 inset;
+  outline: 1px solid #333;
+  border: 1px solid #000;
+  padding: 5px;
+  color: #444;
+  font-size: 24px;
+}
+
+div.new-repo input[type=checkbox] {
+  float: left;
+  display: inline-block;
+}
+
+div.new-repo form input:focus {
+  outline: none;
+  color: #FFF;
+}
+
+div.new-repo form textarea:focus {
+  outline: none;
+  color: #FFF;
+}
+
+div.new-repo input[type="submit"] {
+  color: #999;
+  padding: 5px 10px;
+  float: right;
+  margin: 20px;
+  width: 175px;
+  border: 1px solid #000;
+  font-weight: lighter;
+  -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: #45484d;
+  background: -moz-linear-gradient(top, #222 0%, #111 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222), color-stop(100%,#111));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22222', endColorstr='#11111',GradientType=0 );
+  -moz-box-shadow: 0px 1px 1px #000, 0px 1px 0px rgba(255,255,255,.3) inset;
+  -webkit-box-shadow: 0px 1px 1px #000, 0px 1px 0px rgba(255,255,255,.3) inset;
+  box-shadow: 0px 1px 1px #000,0px 1px 0px rgba(255,255,255,.3) inset;
+  text-shadow: 0 1px 1px #000;
+}
+/* New Repo Form CSS ends here*/
